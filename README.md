@@ -7,6 +7,9 @@
 - [X] SELF JOIN
 - [X] FULL OUTER JOIN
 - [X] CROSS JOIN
+
+## Ch03 Aggregation
+### May 3, 2021
 - [ ] GROUP BY
 - [ ] HAVING
 - [ ] GROUPING SET
