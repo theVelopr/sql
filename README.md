@@ -18,7 +18,7 @@
 <div markdown="1">
 - [X] GROUP BY
 - [X] HAVING
-- [ ] GROUPING SET
+- [X] GROUPING SET
 - [ ] ROLL UP
 - [ ] CUBE
 </div>
