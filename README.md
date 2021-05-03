@@ -17,7 +17,7 @@
 <summary> May 3, 2021 </summary>
 <div markdown="1">
 - [X] GROUP BY
-- [ ] HAVING
+- [X] HAVING
 - [ ] GROUPING SET
 - [ ] ROLL UP
 - [ ] CUBE
