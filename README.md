@@ -1,5 +1,5 @@
 # SQL TIL
-
+| This repository is for my work related topic practice. 
 ## Ch02 Join
 ### May 3, 2021
 - [X] INNER JOIN
@@ -10,7 +10,7 @@
 
 ## Ch03 Aggregation
 ### May 3, 2021
-- [ ] GROUP BY
+- [X] GROUP BY
 - [ ] HAVING
 - [ ] GROUPING SET
 - [ ] ROLL UP
