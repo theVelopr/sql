@@ -153,3 +153,84 @@ ON
 ORDER BY 
 	MANAGER DESC
 	;
+
+-- Ex#02. Indefinite Type Self join
+SELECT 
+      F1.TITLE
+	, F2.TITLE
+	, F1.LENGTH
+FROM 
+	FILM F1
+INNER JOIN 
+	FILM F2
+ON 
+	F1.FILM_ID <> F2.FILM_ID -- searching different movies
+AND
+	F1.LENGTH = F2.LENGTH -- but same lenghth.
+	;
+
+
+
+-- #04. FULL OUTER JOIN
+CREATE TABLE
+IF NOT EXISTS DEPARTMENTS
+(
+DEPARTMENT_ID SERIAL PRIMARY KEY
+, DEPARTMENT_NAME VARCHAR (255) NOT NULL
+);
+
+CREATE TABLE
+IF NOT EXISTS EMPLOYEES
+(
+EMPLOYEE_ID SERIAL PRIMARY KEY
+, EMPLOYEE_NAME VARCHAR (255)
+, DEPARTMENT_ID INTEGER
+);
+
+INSERT INTO DEPARTMENTS
+(DEPARTMENT_NAME)
+VALUES
+('Sales')
+, ('Marketing')
+, ('HR')
+, ('IT')
+, ('Production');
+
+INSERT INTO EMPLOYEES
+( EMPLOYEE_NAME
+, DEPARTMENT_ID
+)
+values
+('Bette Nicholson', 1),
+('Christian Gable', 1),
+('Joe Swank', 2),
+('Fred Costner', 3),
+('Sandra Kilmer', 4),
+('Julia Mcqueen', NULL);
+
+-- Ex#01 Full outer Join 
+SELECT 
+	  E.EMPLOYEE_NAME
+	, D.DEPARTMENT_NAME
+FROM 
+	EMPLOYEES E
+FULL OUTER JOIN 
+	DEPARTMENTS D
+ON 
+	D.DEPARTMENT_ID = E.DEPARTMENT_ID
+	;
+	
+-- Ex#02 Full Outer Join - Left Only
+-- Full outer + Left Only = Left outer + Left Only
+SELECT 
+	  E.EMPLOYEE_NAME
+	, D.DEPARTMENT_NAME
+FROM 
+	EMPLOYEES E
+FULL OUTER JOIN 
+	DEPARTMENTS D
+ON 
+	D.DEPARTMENT_ID = E.DEPARTMENT_ID
+WHERE
+	D.DEPARTMENT_ID IS NULL
+	;
