@@ -6,7 +6,7 @@
 - [X] OUTER JOIN
 - [X] SELF JOIN
 - [X] FULL OUTER JOIN
-- [ ] CROSS JOIN
+- [X] CROSS JOIN
 - [ ] GROUP BY
 - [ ] HAVING
 - [ ] GROUPING SET
