@@ -19,7 +19,7 @@
 - [X] GROUP BY
 - [X] HAVING
 - [X] GROUPING SET
-- [ ] ROLL UP
-- [ ] CUBE
+- [X] ROLL UP
+- [X] CUBE
 </div>
 </details>
